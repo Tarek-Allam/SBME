@@ -6,6 +6,7 @@
 
 - title: "Projects"
   url: "projects"
-
-- default: menu_about
-  url:   "about"
+  
+ - title: "about"
+  url: "about" 
+  
