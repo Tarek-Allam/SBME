@@ -2,6 +2,9 @@ title: Tarek Allam
 logo: /assets/img.png
 #description: text below image
 show_downloads: true
+theme: jekyll-theme-minimal
+#description: text below image
+show_downloads: true
 email: tarekallam.bme@gmail.com
 name: Tarek Allam
 description: >- # this means to ignore newlines until "keywords::"
@@ -11,4 +14,3 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 domain: "" # the domain name for your site, e.g. example.com
 language: en
-theme: jekyll-theme-minimal
