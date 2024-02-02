@@ -1,6 +1,6 @@
-# The Medical Equipments:
-[Device 1](docs/README-1.md)
+# Devices Categories:
+[Sterlization](docs/README-1.md)
+[Optical Coherence Tomography Angiography](docs/README-2.md)
 
-[Device 2](docs/README-2.md)
 
 
