@@ -1,4 +1,18 @@
 title: Tarek Allam
+email:
+name:
+keywords:
+url:
+language:
+permalink:
+ Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-seo-tag
 logo: /assets/image.png
 #description: text below image
 show_downloads: true
