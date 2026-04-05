@@ -1,230 +1,350 @@
 <!DOCTYPE html>
-<html>
-<title>BME Tarek Allam</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
-<body class="w3-black">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomedical Engineering Portfolio | 9 Machine Systems</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="/SBME/assets/logo.png" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PHOTOS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f4f7fc;
+            color: #1e2f3e;
+            line-height: 1.5;
+            padding: 2rem;
+        }
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-  </div>
+        .portfolio {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0a2f44, #1a5a6e);
+            color: white;
+            padding: 2rem 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #2e8b6c;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .content {
+            padding: 2rem 3rem;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #0a2f44;
+            border-left: 5px solid #2e8b6c;
+            padding-left: 1rem;
+            margin: 2rem 0 1.5rem 0;
+        }
+
+        .machines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .machine-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2edf2;
+            transition: all 0.2s ease;
+            overflow: hidden;
+        }
+
+        .machine-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+            border-color: #c0d4df;
+        }
+
+        .card-header {
+            background: #f9fbfd;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e9eff2;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #1a5a6e;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .machine-number {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #2e8b6c;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .skills-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .skills-list li::before {
+            content: "▹";
+            color: #2e8b6c;
+            position: absolute;
+            left: 0;
+        }
+
+        .highlight {
+            background: #eef6f2;
+            border-left: 3px solid #2e8b6c;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        footer {
+            background: #f8fafc;
+            padding: 1.5rem 3rem;
+            text-align: center;
+            border-top: 1px solid #e2edf2;
+            font-size: 0.85rem;
+            color: #5a7a8a;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+            .header {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="portfolio">
+    <div class="header">
+        <h1>🔧 Biomedical Engineering Portfolio</h1>
+        <p>Over 80 corrective/preventive procedures | 9 medical equipment systems</p>
+        <div class="badge">⚡ Oil extraction &lt; 3 min · 0 catastrophic failures · Extended lifespan</div>
+    </div>
+
+    <div class="content">
+        <div class="section-title">📟 Equipment Systems Maintained & Repaired</div>
+        <div class="machines-grid">
+            <!-- Machine 1: STERLINK PLASMAPP -->
+            <div class="machine-card">
+                <div class="card-header">🟢 STERLINK PLASMAPP</div>
+                <div class="card-body">
+                    <div class="machine-number">Low‑Temperature Plasma Sterilizer</div>
+                    <p>Overhauled units with Error 10,30,40,50. Resolved vaporizer misconnections, vacuum pump failures, oil leaks, and RTC battery faults.</p>
+                    <ul class="skills-list">
+                        <li>Custom dual‑pump oil extractor → oil change &lt;3 min</li>
+                        <li>Radial shaft seal replacement (16x28x7, -30°C to +200°C)</li>
+                        <li>Vaporizer heater refurbishment (Kapton film, resistance matching)</li>
+                        <li>Vacuum calibration & biological/chemical validation</li>
+                    </ul>
+                    <div class="highlight">✅ 80+ procedures · 1200% efficiency gain (oil change)</div>
+                </div>
+            </div>
+
+            <!-- Machine 2: Optovue OCT (RTVUE XR series) -->
+            <div class="machine-card">
+                <div class="card-header">🔵 Optovue OCT (RTVUE XR2/XR3/XR4, SOLIX, IVUE80)</div>
+                <div class="card-body">
+                    <div class="machine-number">Optical Coherence Tomography</div>
+                    <p>Maintained 6+ OCT systems. Hardware upgrades, calibration, software troubleshooting, and component‑level repairs.</p>
+                    <ul class="skills-list">
+                        <li>Replaced bulging top capacitors, RTC circuits, boot order fixes</li>
+                        <li>Upgraded EOL RTVue 100 to XR3 hard drive specs</li>
+                        <li>Calibrated scanner heads using certified tools & optical power meters</li>
+                        <li>Remote software support & event log analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Machine 3: Micro Clear Laser Fundus Camera -->
+            <div class="machine-card">
+                <div class="card-header">🟠 Micro Clear Laser Fundus Camera</div>
+                <div class="card-body">
+                    <div class="machine-number">Ultra‑wide field laser scanning</div>
+                    <p>Installed on Nvidia Jetson TX2 platform, upgraded RT‑Scanning software via Ubuntu terminal, and trained clinical staff.</p>
+                    <ul class="skills-list">
+                        <li>Replaced optical fiber, coupler, FC connector with precise alignment</li>
+                        <li>Troubleshot laser driver circuits, thermoelectric coolers, galvo drivers</li>
+                        <li>Upgraded AI diagnosis tools via terminal commands</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Machine 4: A-Scan / Ocular Ultrasound -->
+            <div class="machine-card">
+                <div class="card-header">🟡 A‑Scan / Ocular Ultrasound</div>
+                <div class="card-body">
+                    <div class="machine-number">Biometry & IOL calculations</div>
+                    <p>Refurbished probes, optimized image gain/intensity, performed IOL power calculations.</p>
+                    <ul class="skills-list">
+                        <li>Renewed internal soldering points, repaired faulty cable connections</li>
+                        <li>Replaced SMD Mini USB & DC power connectors on main console</li>
+                        <li>Custom foot switch designed via keyboard PCB modification</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Machine 5: Pfeiffer Rotary Vane Vacuum Pump (standalone) -->
+            <div class="machine-card">
+                <div class="card-header">🟣 Pfeiffer Duo 6 Vacuum Pump</div>
+                <div class="card-body">
+                    <div class="machine-number">Rotary vane technology</div>
+                    <p>Diagnosed pump humming, high current draw (8A). Found occlusions and broken vanes/springs.</p>
+                    <ul class="skills-list">
+                        <li>Disassembled vacuum chamber, replaced vanes, O‑rings, radial shaft seal</li>
+                        <li>Installed new pump & validated with vacuum calibration</li>
+                        <li>Refurbished old pump as spare part</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Machine 6: Steam Sterilizer (general) -->
+            <div class="machine-card">
+                <div class="card-header">🔴 Steam Sterilizer (Autoclave)</div>
+                <div class="card-body">
+                    <div class="machine-number">High‑temperature steam sterilization</div>
+                    <p>Performed preventive maintenance, water filling/draining, and filter replacements.</p>
+                    <ul class="skills-list">
+                        <li>Used portable oil/water extractor for draining cycles</li>
+                        <li>Calibrated temperature sensors and pressure switches</li>
+                        <li>Resolved water leakage and pump priming issues</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Machine 7: H2O2 Plasma Sterilizer (other brand) -->
+            <div class="machine-card">
+                <div class="card-header">🟤 Generic Plasma Sterilizer</div>
+                <div class="card-body">
+                    <div class="machine-number">Hydrogen peroxide low‑temp</div>
+                    <p>Addressed injection errors and door sensor failures. Replaced pinch valves and silicon tubes.</p>
+                    <ul class="skills-list">
+                        <li>Modified door sensor nob design to avoid full housing replacement</li>
+                        <li>RTC battery replacement & timestamp correction</li>
+                        <li>Vacuum calibration & biological indicator validation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Machine 8: Diagnostic Ultrasound (General) -->
+            <div class="machine-card">
+                <div class="card-header">⚪ Diagnostic Ultrasound System</div>
+                <div class="card-body">
+                    <div class="machine-number">B‑mode / Doppler</div>
+                    <p>Repaired probe connectors, power supplies, and control panels. Optimized image quality.</p>
+                    <ul class="skills-list">
+                        <li>Recapped SMPS, replaced inrush current limiters</li>
+                        <li>Resolved debouncing glitches in control switches</li>
+                        <li>Refurbished trackball and encoder assemblies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Machine 9: Laboratory Centrifuge / Power Electronics -->
+            <div class="machine-card">
+                <div class="card-header">🔘 Laboratory Centrifuge</div>
+                <div class="card-body">
+                    <div class="machine-number">High‑speed / refrigerated</div>
+                    <p>Diagnosed motor driver failures, replaced motor‑run capacitors, and balanced rotors.</p>
+                    <ul class="skills-list">
+                        <li>Repaired brushless DC motor controllers</li>
+                        <li>Replaced damaged Hall sensors and bearings</li>
+                        <li>Performed speed calibration using tachometer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">📊 Analytical Overview (All Machines)</div>
+        <div style="background: #fefcf5; border-radius: 24px; padding: 1.5rem; border: 1px solid #e9e0c7; margin: 1rem 0;">
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+                <div style="flex:1;">
+                    <h4>Work Order Types (80+ cases)</h4>
+                    <ul style="margin-top: 0.8rem;">
+                        <li><strong>Electrical issues:</strong> 35% (sensors, RTC, SMPS, heaters)</li>
+                        <li><strong>Mechanical issues:</strong> 45% (seals, bearings, hinges, vanes)</li>
+                        <li><strong>Preventive maintenance:</strong> 10% (filters, oil changes, calibration)</li>
+                        <li><strong>Innovation/Testing:</strong> 10% (custom test circuits, oil extractor)</li>
+                    </ul>
+                </div>
+                <div style="flex:1;">
+                    <h4>Top Corrective Actions</h4>
+                    <ul style="margin-top: 0.8rem;">
+                        <li>Component replacement: 40%</li>
+                        <li>Repair & calibration: 30%</li>
+                        <li>Diagnostics & testing: 20%</li>
+                        <li>Preventive measures: 10%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">⏳ Lifecycle Maximization Strategy</div>
+        <div class="highlight" style="background: #eef3f7; margin-bottom: 1rem;">
+            <ul style="margin-left: 1.5rem;">
+                <li><strong>Predictive replacement</strong> – oil seals every 2 years, RTC batteries at 2.5V threshold</li>
+                <li><strong>Fluid management</strong> – oil change < 3 minutes encourages frequent maintenance</li>
+                <li><strong>Component refurbishment</strong> – Kapton heaters, micro switches, gas springs</li>
+                <li><strong>Validation lock</strong> – biological + chemical indicators after any major repair</li>
+            </ul>
+        </div>
+
+        <div style="background: #f4f9f4; border-radius: 24px; padding: 1.5rem; margin: 2rem 0;">
+            <h3 style="color: #1a5a6e;">📌 Portfolio Summary</h3>
+            <p>This portfolio documents <strong>9 distinct medical equipment systems</strong> with over 80 combined corrective/preventive procedures. The STERLINK PLASMAPP case study exemplifies full system restoration — from error code 40 to validated sterilization. All machine numbers and service logs are available for technical review upon request.</p>
+            <p style="margin-top: 0.8rem;"><strong>Video library & analytical dashboards available.</strong></p>
+        </div>
+
+        <footer>
+            Senior Biomedical Engineer · 10+ years electronics · 9 machine systems · <3 min oil change · 0 catastrophic failures
+        </footer>
+    </div>
 </div>
-
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Tarek Allam.</h1>
-    <p>Systems and Biomedical Engineer.</p>
-    <img src="/SBME/assets/image.png" alt="boy" class="w3-image" width="384" height="384">
-	<ul
-	<li><a href="docs/README-1">Ruseme</a></li>
-	</ul>
-  </header>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">My Name</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">Photography</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
-    </div>
-    <p class="w3-wide">Web Design</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-    </div>
-    <p class="w3-wide">Photoshop</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-    </div><br>
-    
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br>
-        Partners
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br>
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br>
-        Meetings
-      </div>
-    </div>
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <a class="fa fa-download" href="https://google.com" role="button">Download Resume</a>
-    </button>
-	<li class="w3-padding-16"
-	<button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <a href="https://google.com">Test</a>
-    </button>
-	</li>
-    <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">5GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    <!-- End Grid/Pricing tables -->
-    </div>
-    
-    <!-- Testimonials -->
-    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
-    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
-    <p>John Doe saved us from a web disaster.</p><br>
-    
-    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
-    <p>No one is better than John Doe.</p>
-  <!-- End About Section -->
-  </div>
-  
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Photos</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="/SBME/assets/image.png" style="width:100%">
-        <img src="/SBME/assets/image.png" style="width:100%">
-        <img src="/SBME/assets/image.png" style="width:100%">
-      </div>
-
-      <div class="w3-half">
-        <img src="/w3images/underwater.jpg" style="width:100%">
-        <img src="/w3images/chef.jpg" style="width:100%">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/p6.jpg" style="width:100%">
-      </div>
-    <!-- End photo grid -->
-    </div>
-  <!-- End Portfolio Section -->
-  </div>
-
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
-    </div><br>
-    <p>Let's get in touch. Send me a message:</p>
-
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
-
 </body>
 </html>
