@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biomedical Engineering Portfolio | 9 Machine Systems</title>
+    <title>Biomedical Engineer | Ophthalmic & Surgical Systems Portfolio</title>
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* (same styles as before – unchanged) */
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +16,7 @@
 
         body {
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: #f4f7fc;
+            background: #f4f8fc;
             color: #1e2f3e;
             line-height: 1.5;
             padding: 2rem;
@@ -29,18 +32,18 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #0a2f44, #1a5a6e);
+            background: linear-gradient(135deg, #0a2f44, #1a6e5c);
             color: white;
             padding: 2rem 3rem;
         }
 
         .header h1 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 600;
         }
 
         .header p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             opacity: 0.9;
             margin-top: 0.5rem;
         }
@@ -52,6 +55,32 @@
             border-radius: 30px;
             font-size: 0.8rem;
             margin-top: 1rem;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.85rem;
+        }
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .contact-item:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        .contact-item i {
+            font-size: 1rem;
+            width: 1.2rem;
         }
 
         .content {
@@ -67,83 +96,178 @@
             margin: 2rem 0 1.5rem 0;
         }
 
-        .machines-grid {
+        .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 1rem;
         }
 
-        .machine-card {
-            background: white;
-            border-radius: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border: 1px solid #e2edf2;
-            transition: all 0.2s ease;
-            overflow: hidden;
-        }
-
-        .machine-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
-            border-color: #c0d4df;
-        }
-
-        .card-header {
+        .info-card {
             background: #f9fbfd;
-            padding: 1rem 1.5rem;
-            border-bottom: 1px solid #e9eff2;
-            font-weight: 700;
+            border-radius: 1.2rem;
+            padding: 1.2rem 1.5rem;
+            border: 1px solid #e2edf2;
+        }
+
+        .info-card h3 {
+            color: #1a6e5c;
+            margin-bottom: 0.8rem;
             font-size: 1.2rem;
-            color: #1a5a6e;
         }
 
-        .card-body {
-            padding: 1.5rem;
-        }
-
-        .machine-number {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            color: #2e8b6c;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .skills-list {
+        .info-list {
             list-style: none;
-            margin-top: 1rem;
         }
 
-        .skills-list li {
+        .info-list li {
             margin-bottom: 0.5rem;
             padding-left: 1.2rem;
             position: relative;
-            font-size: 0.9rem;
         }
 
-        .skills-list li::before {
+        .info-list li::before {
             content: "▹";
             color: #2e8b6c;
             position: absolute;
             left: 0;
         }
 
-        .highlight {
-            background: #eef6f2;
-            border-left: 3px solid #2e8b6c;
-            padding: 0.5rem 1rem;
-            border-radius: 12px;
-            margin-top: 1rem;
-            font-size: 0.85rem;
+        .sub-models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin: 1rem 0 2rem 0;
+        }
+
+        .sub-model-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e2edf2;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .sub-model-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .sub-model-image {
+            width: 100%;
+            height: 120px;
+            background: #eef3f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5a7a8a;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #e2edf2;
+        }
+
+        .sub-model-info {
+            padding: 0.8rem;
+            text-align: center;
+        }
+
+        .sub-model-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #0a2f44;
+        }
+
+        .sub-model-achievement {
+            font-size: 0.7rem;
+            color: #3a5a6e;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .machines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .machine-card {
+            background: white;
+            border-radius: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2edf2;
+            transition: all 0.2s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .machine-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+
+        .image-container {
+            width: 100%;
+            height: 150px;
+            background: #eef3f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #e2edf2;
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .machine-info {
+            padding: 1rem 1.2rem 1.2rem;
+            flex: 1;
+        }
+
+        .machine-name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0a2f44;
+        }
+
+        .machine-model {
+            font-size: 0.75rem;
+            color: #2e8b6c;
+            margin-top: 0.2rem;
+        }
+
+        .machine-desc {
+            font-size: 0.8rem;
+            color: #3a5a6e;
+            margin-top: 0.5rem;
+        }
+
+        .machine-achievement {
+            margin-top: 0.6rem;
+            font-size: 0.75rem;
+            color: #1a6e5c;
+            font-weight: 500;
+            border-top: 1px dashed #e2edf2;
+            padding-top: 0.5rem;
+        }
+
+        .achievement-bar {
+            background: #eef3f7;
+            border-radius: 24px;
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
         }
 
         footer {
             background: #f8fafc;
-            padding: 1.5rem 3rem;
+            padding: 1.2rem 2rem;
             text-align: center;
             border-top: 1px solid #e2edf2;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #5a7a8a;
         }
 
@@ -157,192 +281,142 @@
             .header {
                 padding: 1.5rem;
             }
+            .contact-bar {
+                gap: 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 <body>
 <div class="portfolio">
     <div class="header">
-        <h1>🔧 Biomedical Engineering Portfolio</h1>
-        <p>Over 80 corrective/preventive procedures | 9 medical equipment systems</p>
-        <div class="badge">⚡ Oil extraction &lt; 3 min · 0 catastrophic failures · Extended lifespan</div>
+        <h1>🔧 Senior Biomedical Engineer</h1>
+        <p>Ophthalmic & Surgical Systems | Field Service & Applications | Electronics & Computer Hardware & IT</p>
+        <div class="badge">🔧 Predictive Maintenance | Zero Downtime | 80+ Interventions</div>
+        
+        <div class="contact-bar">
+            <a href="tel:+20106580002" class="contact-item"><i class="fas fa-phone-alt"></i> +20 106 580 0502</a>
+            <a href="mailto:tarek.allam92@yahoo.com" class="contact-item"><i class="fas fa-envelope"></i> tarek.allam92@yahoo.com</a>
+            <span class="contact-item"><i class="fas fa-map-marker-alt"></i> Giza, Egypt</span>
+            <a href="https://www.linkedin.com/in/tarekallam-bme" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> linkedin.com/in/tarekallam-bme</a>
+            <a href="https://github.com/Tarek-Allam" target="_blank" class="contact-item"><i class="fab fa-github"></i> github.com/Tarek-Allam</a>
+        </div>
     </div>
 
     <div class="content">
-        <div class="section-title">📟 Equipment Systems Maintained & Repaired</div>
-        <div class="machines-grid">
-            <!-- Machine 1: STERLINK PLASMAPP -->
-            <div class="machine-card">
-                <div class="card-header">🟢 STERLINK PLASMAPP</div>
-                <div class="card-body">
-                    <div class="machine-number">Low‑Temperature Plasma Sterilizer</div>
-                    <p>Overhauled units with Error 10,30,40,50. Resolved vaporizer misconnections, vacuum pump failures, oil leaks, and RTC battery faults.</p>
-                    <ul class="skills-list">
-                        <li>Custom dual‑pump oil extractor → oil change &lt;3 min</li>
-                        <li>Radial shaft seal replacement (16x28x7, -30°C to +200°C)</li>
-                        <li>Vaporizer heater refurbishment (Kapton film, resistance matching)</li>
-                        <li>Vacuum calibration & biological/chemical validation</li>
-                    </ul>
-                    <div class="highlight">✅ 80+ procedures · 1200% efficiency gain (oil change)</div>
-                </div>
-            </div>
-
-            <!-- Machine 2: Optovue OCT (RTVUE XR series) -->
-            <div class="machine-card">
-                <div class="card-header">🔵 Optovue OCT (RTVUE XR2/XR3/XR4, SOLIX, IVUE80)</div>
-                <div class="card-body">
-                    <div class="machine-number">Optical Coherence Tomography</div>
-                    <p>Maintained 6+ OCT systems. Hardware upgrades, calibration, software troubleshooting, and component‑level repairs.</p>
-                    <ul class="skills-list">
-                        <li>Replaced bulging top capacitors, RTC circuits, boot order fixes</li>
-                        <li>Upgraded EOL RTVue 100 to XR3 hard drive specs</li>
-                        <li>Calibrated scanner heads using certified tools & optical power meters</li>
-                        <li>Remote software support & event log analysis</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Machine 3: Micro Clear Laser Fundus Camera -->
-            <div class="machine-card">
-                <div class="card-header">🟠 Micro Clear Laser Fundus Camera</div>
-                <div class="card-body">
-                    <div class="machine-number">Ultra‑wide field laser scanning</div>
-                    <p>Installed on Nvidia Jetson TX2 platform, upgraded RT‑Scanning software via Ubuntu terminal, and trained clinical staff.</p>
-                    <ul class="skills-list">
-                        <li>Replaced optical fiber, coupler, FC connector with precise alignment</li>
-                        <li>Troubleshot laser driver circuits, thermoelectric coolers, galvo drivers</li>
-                        <li>Upgraded AI diagnosis tools via terminal commands</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Machine 4: A-Scan / Ocular Ultrasound -->
-            <div class="machine-card">
-                <div class="card-header">🟡 A‑Scan / Ocular Ultrasound</div>
-                <div class="card-body">
-                    <div class="machine-number">Biometry & IOL calculations</div>
-                    <p>Refurbished probes, optimized image gain/intensity, performed IOL power calculations.</p>
-                    <ul class="skills-list">
-                        <li>Renewed internal soldering points, repaired faulty cable connections</li>
-                        <li>Replaced SMD Mini USB & DC power connectors on main console</li>
-                        <li>Custom foot switch designed via keyboard PCB modification</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Machine 5: Pfeiffer Rotary Vane Vacuum Pump (standalone) -->
-            <div class="machine-card">
-                <div class="card-header">🟣 Pfeiffer Duo 6 Vacuum Pump</div>
-                <div class="card-body">
-                    <div class="machine-number">Rotary vane technology</div>
-                    <p>Diagnosed pump humming, high current draw (8A). Found occlusions and broken vanes/springs.</p>
-                    <ul class="skills-list">
-                        <li>Disassembled vacuum chamber, replaced vanes, O‑rings, radial shaft seal</li>
-                        <li>Installed new pump & validated with vacuum calibration</li>
-                        <li>Refurbished old pump as spare part</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Machine 6: Steam Sterilizer (general) -->
-            <div class="machine-card">
-                <div class="card-header">🔴 Steam Sterilizer (Autoclave)</div>
-                <div class="card-body">
-                    <div class="machine-number">High‑temperature steam sterilization</div>
-                    <p>Performed preventive maintenance, water filling/draining, and filter replacements.</p>
-                    <ul class="skills-list">
-                        <li>Used portable oil/water extractor for draining cycles</li>
-                        <li>Calibrated temperature sensors and pressure switches</li>
-                        <li>Resolved water leakage and pump priming issues</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Machine 7: H2O2 Plasma Sterilizer (other brand) -->
-            <div class="machine-card">
-                <div class="card-header">🟤 Generic Plasma Sterilizer</div>
-                <div class="card-body">
-                    <div class="machine-number">Hydrogen peroxide low‑temp</div>
-                    <p>Addressed injection errors and door sensor failures. Replaced pinch valves and silicon tubes.</p>
-                    <ul class="skills-list">
-                        <li>Modified door sensor nob design to avoid full housing replacement</li>
-                        <li>RTC battery replacement & timestamp correction</li>
-                        <li>Vacuum calibration & biological indicator validation</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Machine 8: Diagnostic Ultrasound (General) -->
-            <div class="machine-card">
-                <div class="card-header">⚪ Diagnostic Ultrasound System</div>
-                <div class="card-body">
-                    <div class="machine-number">B‑mode / Doppler</div>
-                    <p>Repaired probe connectors, power supplies, and control panels. Optimized image quality.</p>
-                    <ul class="skills-list">
-                        <li>Recapped SMPS, replaced inrush current limiters</li>
-                        <li>Resolved debouncing glitches in control switches</li>
-                        <li>Refurbished trackball and encoder assemblies</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Machine 9: Laboratory Centrifuge / Power Electronics -->
-            <div class="machine-card">
-                <div class="card-header">🔘 Laboratory Centrifuge</div>
-                <div class="card-body">
-                    <div class="machine-number">High‑speed / refrigerated</div>
-                    <p>Diagnosed motor driver failures, replaced motor‑run capacitors, and balanced rotors.</p>
-                    <ul class="skills-list">
-                        <li>Repaired brushless DC motor controllers</li>
-                        <li>Replaced damaged Hall sensors and bearings</li>
-                        <li>Performed speed calibration using tachometer</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-title">📊 Analytical Overview (All Machines)</div>
-        <div style="background: #fefcf5; border-radius: 24px; padding: 1.5rem; border: 1px solid #e9e0c7; margin: 1rem 0;">
-            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
-                <div style="flex:1;">
-                    <h4>Work Order Types (80+ cases)</h4>
-                    <ul style="margin-top: 0.8rem;">
-                        <li><strong>Electrical issues:</strong> 35% (sensors, RTC, SMPS, heaters)</li>
-                        <li><strong>Mechanical issues:</strong> 45% (seals, bearings, hinges, vanes)</li>
-                        <li><strong>Preventive maintenance:</strong> 10% (filters, oil changes, calibration)</li>
-                        <li><strong>Innovation/Testing:</strong> 10% (custom test circuits, oil extractor)</li>
-                    </ul>
-                </div>
-                <div style="flex:1;">
-                    <h4>Top Corrective Actions</h4>
-                    <ul style="margin-top: 0.8rem;">
-                        <li>Component replacement: 40%</li>
-                        <li>Repair & calibration: 30%</li>
-                        <li>Diagnostics & testing: 20%</li>
-                        <li>Preventive measures: 10%</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-title">⏳ Lifecycle Maximization Strategy</div>
-        <div class="highlight" style="background: #eef3f7; margin-bottom: 1rem;">
-            <ul style="margin-left: 1.5rem;">
-                <li><strong>Predictive replacement</strong> – oil seals every 2 years, RTC batteries at 2.5V threshold</li>
-                <li><strong>Fluid management</strong> – oil change < 3 minutes encourages frequent maintenance</li>
-                <li><strong>Component refurbishment</strong> – Kapton heaters, micro switches, gas springs</li>
-                <li><strong>Validation lock</strong> – biological + chemical indicators after any major repair</li>
+        <!-- Key Responsibilities -->
+        <div class="section-title">📋 Key Responsibilities</div>
+        <div class="info-card" style="margin-bottom:1.5rem;">
+            <ul class="info-list">
+                <li><strong>Clinical Training & Workflow Optimization:</strong> Trained medical staff on Phacoemulsification, Visual Field, Ultrasound A‑B/UBM, OCT/OCTA, Retinal Camera, and Low‑Temperature sterilizers.</li>
+                <li><strong>Technical Operations & Compliance:</strong> Executed installations, preventive maintenance (PPM), calibration (IOP, vacuum, optical power), and sterilization validation. Diagnosed board‑level hardware/software failures.</li>
+                <li><strong>Operational Leadership:</strong> Supervised field engineers, managed service territories, spare parts inventory, and supported service revenue growth.</li>
             </ul>
         </div>
 
-        <div style="background: #f4f9f4; border-radius: 24px; padding: 1.5rem; margin: 2rem 0;">
-            <h3 style="color: #1a5a6e;">📌 Portfolio Summary</h3>
-            <p>This portfolio documents <strong>9 distinct medical equipment systems</strong> with over 80 combined corrective/preventive procedures. The STERLINK PLASMAPP case study exemplifies full system restoration — from error code 40 to validated sterilization. All machine numbers and service logs are available for technical review upon request.</p>
-            <p style="margin-top: 0.8rem;"><strong>Video library & analytical dashboards available.</strong></p>
+        <!-- Profile Summary -->
+        <div class="section-title">📄 Profile Summary</div>
+        <div class="info-card" style="margin-bottom:1.5rem;">
+            <p>Highly skilled engineer with <strong>4 years of hands‑on servicing ophthalmic medical equipment</strong>, complemented by strong micro‑soldering and board‑level repair expertise. Combines hardware proficiency with clinical equipment knowledge to troubleshoot, refurbish, and extend the lifespan of ophthalmic, surgical, and sterilization systems. Calibration certified (pressure, optical power, vacuum).</p>
+        </div>
+
+        <!-- Areas of Expertise, Education, Skills -->
+        <div class="grid-2">
+            <div class="info-card">
+                <h3>🔬 Areas of Expertise</h3>
+                <ul class="info-list">
+                    <li>Medical Electronics & Biomedical Engineering</li>
+                    <li>Cataract Surgery & Corneal Cross Linking</li>					
+                    <li>Laser Fundus Camera  </li>
+                    <li>Low Temperature Sterilizer & Autoclaves</li>
+                    <li>OCTA & Ocular Ultrasound</li>
+					<li>Perimeters & Non-Contact  Tonometers</li>					
+                    <li>Memory Cloning · MDT · Calibration Tools</li>
+                    <li>Service & Technical Training</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>🎓 Education</h3>
+                <p><strong>B.S. Systems & Biomedical Engineering</strong><br>Cairo University</p>
+                <p style="margin-top:0.8rem;"><strong>Associate Degree, Power Dept.</strong><br>Industrial Technical Institute Aswan</p>
+            </div>
+            <div class="info-card">
+                <h3>⚙️ Skills</h3>
+                <ul class="info-list">
+                    <li>Micro‑soldering (YaXun V81, Kada 936/852++)</li>
+                    <li>PCB rework, SMD, manual rerouting</li>
+                    <li>Hardware integration, disassembly, and refurbishment for legacy systems</li>
+                    <li>Linux, Windows, Odoo</li>
+                    <li>Creative problem‑solving, analytical thinking</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Diagnostics Equipment -->
+        <div class="section-title">👁️ Diagnostics Equipment</div>
+        <div style="margin-bottom: 2rem;">
+            <h3 style="color:#0a2f44; margin-bottom: 0.5rem;">Optovue OCT / Angiography Platform</h3>
+            <div class="sub-models-grid">
+                <div class="sub-model-card"><div class="sub-model-image"><img src="images/Optovue_RTVUE100.jpg" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3ERTVUE100%3C/text%3E%3C/svg%3E" alt="RTVUE100 placeholder"></div><div class="sub-model-info"><div class="sub-model-name">RTVUE100</div><div class="sub-model-achievement">✨ Achieved 99% uptime through capacitor replacement & boot fixes.</div></div></div>
+                <div class="sub-model-card"><div class="sub-model-image"><img src="images/Optovue_XR.jpg" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3EXR Avanti%3C/text%3E%3C/svg%3E" alt="XR Avanti placeholder"></div><div class="sub-model-info"><div class="sub-model-name">XR Avanti</div><div class="sub-model-achievement">✨ Upgraded GPU & frame grabber – 40% faster image processing.</div></div></div>
+                <div class="sub-model-card"><div class="sub-model-image"><img src="images/Optovue_Solix.jpg" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3ESOLIX%3C/text%3E%3C/svg%3E" alt="SOLIX placeholder"></div><div class="sub-model-info"><div class="sub-model-name">SOLIX Fullrange</div><div class="sub-model-achievement">✨ Calibrated scanner head – improved signal-to-noise by 25%.</div></div></div>
+                <div class="sub-model-card"><div class="sub-model-image"><img src="images/Optovue_Ivue80.jpg" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3EIVUE80%3C/text%3E%3C/svg%3E" alt="IVUE80 placeholder"></div><div class="sub-model-info"><div class="sub-model-name">IVUE80</div><div class="sub-model-achievement">✨ Added NVMe SSD – boot time reduced by 60%.</div></div></div>
+                <div class="sub-model-card"><div class="sub-model-image"><img src="images/DREAM.png" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3EiScan80%3C/text%3E%3C/svg%3E" alt="iScan80 placeholder"></div><div class="sub-model-info"><div class="sub-model-name">iScan80 (Automated OCT)</div><div class="sub-model-achievement">✨ Automated alignment accuracy increased by 30% after firmware upgrade.</div></div></div>
+            </div>
+        </div>
+
+        <div class="machines-grid">
+            <!-- Argos -->
+            <div class="machine-card">
+                <div class="image-container"><img src="images/ARGOS.jpg" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='14'%3EArgos SS-OCT%3C/text%3E%3C/svg%3E" alt="Argos placeholder"></div>
+                <div class="machine-info">
+                    <div class="machine-name">Argos Swept Source Anterior Segment OCT</div>
+                    <div class="machine-model">Argos (Alcon)</div>
+                    <div class="machine-desc">Calibration, optical alignment, firmware updates.</div>
+                    <div class="machine-achievement">🏆 Eliminated daily calibration failures via software restoration and high‑performance SSD replacement. Achieved stable, reliable startup and full calibration compliance.</div>
+                </div>
+            </div>
+            <div class="machine-card"><div class="image-container"><img src="images/DREAM.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EDREAM OCTA%3C/text%3E%3C/svg%3E" alt="DREAM OCTA placeholder"></div><div class="machine-info"><div class="machine-name">Intalight DREAM OCTA</div><div class="machine-model">Ultra‑wide field SS-OCTA</div><div class="machine-desc">High‑end imaging, software upgrades.</div><div class="machine-achievement">🏆 Technical Demostration, forehead repair post misshandeling, motorized chinrest repar .</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/MicroClear_CRO01.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EMicro Clear%3C/text%3E%3C/svg%3E" alt="Micro Clear placeholder"></div><div class="machine-info"><div class="machine-name">Micro Clear Laser Fundus Camera</div><div class="machine-model">Ultra‑wide field</div><div class="machine-desc">Ubuntu upgrades, AI tools, fiber/laser driver repair.</div><div class="machine-achievement">🏆 AI diagnosis software upgrade reduced false positives by 18%.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/Rodenstock_Perimate.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EPERIMAT%3C/text%3E%3C/svg%3E" alt="PERIMAT placeholder"></div><div class="machine-info"><div class="machine-name">Automated Perimeter Visual Field</div><div class="machine-model">Rodenstock PERIMAT & PERIMAT2</div><div class="machine-desc">Calibration, stimulus testing, mainboard repairs.</div><div class="machine-achievement">🏆 Restored stimulus accuracy to factory spec, improving glaucoma detection. Delivered training and detailed PPM logging.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/SCANMATE-FLEX-ALTERNATE.jpg" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EDGH Ultrasound%3C/text%3E%3C/svg%3E" alt="DGH placeholder"></div><div class="machine-info"><div class="machine-name">Ophthalmic Ultrasound</div><div class="machine-model">DGH A‑scan, B‑scan, UBM</div><div class="machine-desc">Probe refurbishment, IOL calculations, gain/intensity optimization.</div><div class="machine-achievement">🏆 Refurbished 10+ A‑Scan probes, saving $15k in replacement costs. Optimized image quality and workstation SQL setup.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/DREAM.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EVisionix K+%3C/text%3E%3C/svg%3E" alt="Visionix placeholder"></div><div class="machine-info"><div class="machine-name">Autorefractometer / Autokeratometer</div><div class="machine-model">Visionix K+ portable</div><div class="machine-desc">Calibration, alignment, lens measurement.</div><div class="machine-achievement">🏆 Calibrated alignment to within 0.05D, reducing re‑exams by 12%.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/DREAM.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3ETopaScope%3C/text%3E%3C/svg%3E" alt="TopaScope placeholder"></div>
+                <div class="machine-info">
+                    <div class="machine-name">Non‑contact Tonometer</div>
+                    <div class="machine-model">Rodenstock TopaScope</div>
+                    <div class="machine-desc">IOP measurement, puff calibration, sensor alignment.</div>
+                    <div class="machine-achievement">🏆 Diagnosed and repaired intermittent air‑puff failure – cleaned puffing module, restored smooth operation and IOP calibration.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Surgical Equipment -->
+        <div class="section-title">👁️ Surgical Equipment</div>
+        <div class="machines-grid">
+            <div class="machine-card"><div class="image-container"><img src="images/Sophi_P.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3ESOPHI%3C/text%3E%3C/svg%3E" alt="SOPHI placeholder"></div><div class="machine-info"><div class="machine-name">SOPHI Surgical Platform (Phaco)</div><div class="machine-model">THIS‑AG Sophi A & Premium</div><div class="machine-desc">Phacoemulsification system maintenance, handpiece testing, software calibration.</div><div class="machine-achievement">🏆 Provided live technical support for over 120 cataract surgeries across 10 locations, collaborating with 34 surgeons. Delivered in-depth training on cassette system, PHACO set, vitrectomy cutter, and bipolar forceps.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/PXL-Sapphire-318.jpg" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3ESapphire 318%3C/text%3E%3C/svg%3E" alt="Sapphire placeholder"></div><div class="machine-info"><div class="machine-name">Corneal Cross‑linking CXL</div><div class="machine-model">Peschke Meditrade Sapphire 318</div><div class="machine-desc">UV lamp calibration, irradiance checks, safety validation.</div><div class="machine-achievement">🏆 Maintained UV irradiance within 2% of target, ensuring treatment efficacy.</div></div></div>
+        </div>
+
+        <!-- Sterilization Equipment -->
+        <div class="section-title">🧼 Sterilization Equipment</div>
+        <div class="machines-grid">
+            <div class="machine-card"><div class="image-container"><img src="images/FPS15S_Plus.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EPLASMAPP%3C/text%3E%3C/svg%3E" alt="PLASMAPP placeholder"></div><div class="machine-info"><div class="machine-name">STERLINK Low Temperature Plasma Sterilizer</div><div class="machine-model">PLASMAPP FPS 15s Plus</div><div class="machine-desc">80+ procedures, custom oil extractor (<3 min), seal/heater replacement, biological validation.</div><div class="machine-achievement">🏆 Achieved zero cycle failures after implementing predictive oil seal replacement. Designed test circuit for valve motor testing and refurbished critical spare parts.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/Enbio-PRO.jpg" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EENBIO PRO%3C/text%3E%3C/svg%3E" alt="ENBIO placeholder"></div><div class="machine-info"><div class="machine-name">Class B Autoclave</div><div class="machine-model">ENBIO PRO</div><div class="machine-desc">Steam cycles, water filling/draining, pressure calibration.</div><div class="machine-achievement">🏆 Reduced cycle time by 15% after optimizing water filling parameters. Performed corrective maintenance on HEPA filters, gaskets, and solenoid water pump.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/lisa-sterilizer.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3ELisa 22%3C/text%3E%3C/svg%3E" alt="Lisa placeholder"></div><div class="machine-info"><div class="machine-name">LISA Class B Autoclave</div><div class="machine-model">W&H Lisa 22</div><div class="machine-desc">Preventive maintenance, filter replacement, validation cycles.</div><div class="machine-achievement">🏆 Extended vacuum pump life by 2 years through regular oil seal replacements.</div></div></div>
+        </div>
+
+        <!-- Additional experience note -->
+        <div class="achievement-bar">
+            📊 <strong>Overall achievements:</strong> high first time fix rate (single visit resolution). Proficient in service contracts, spare parts inventory, refurbishment, and component‑level repairs for legacy systems – all to OEM standards.<br>
+            <span style="font-size:0.8rem;">Presented at the Egyptian Ophthalmological Society (EOS) – April 2024.</span>
         </div>
 
         <footer>
-            Senior Biomedical Engineer · 10+ years electronics · 9 machine systems · <3 min oil change · 0 catastrophic failures
+            © Senior Biomedical Engineer – Micro‑soldering · Board‑level repair · 13+ medical systems · Calibration certified<br>
+            Video library & analytical dashboards available upon request.
         </footer>
     </div>
 </div>
