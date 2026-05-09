@@ -160,9 +160,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #5a7a8a;
-            font-size: 0.9rem;
             border-bottom: 1px solid #e2edf2;
+        }
+        .sub-model-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .sub-model-info {
@@ -180,7 +183,16 @@
             font-size: 0.7rem;
             color: #3a5a6e;
             margin-top: 0.5rem;
-            font-style: italic;
+            font-style: normal;
+            text-align: left;
+            line-height: 1.4;
+        }
+        .sub-model-achievement ul {
+            padding-left: 1rem;
+            margin: 0.3rem 0;
+        }
+        .sub-model-achievement li {
+            margin-bottom: 0.2rem;
         }
 
         .machines-grid {
@@ -294,7 +306,7 @@
     <div class="header">
         <h1>🔧 Tarek Allam Sr. Biomedical Engineer</h1>
         <p>Ophthalmic & Surgical Systems | Field Service & Applications | Electronics & Computer Hardware & IT</p>
-        <div class="badge">🔧 Predictive Maintenance | Zero Downtime | 80+ Interventions</div>
+        <div class="badge">🔧 Predictive Maintenance | Zero Downtime | EOL Support | Comprehensive Repairs</div>
         
         <div class="contact-bar">
             <a href="tel:+20106580002" class="contact-item"><i class="fas fa-phone-alt"></i> +20 106 580 0502</a>
@@ -358,18 +370,118 @@
         <div style="margin-bottom: 2rem;">
             <h3 style="color:#0a2f44; margin-bottom: 0.5rem;">Optovue OCT / Angiography Platform</h3>
             <div class="sub-models-grid">
-                <div class="sub-model-card"><div class="sub-model-image"><img src="images/Optovue_RTVUE100.jpg" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3ERTVUE100%3C/text%3E%3C/svg%3E" alt="RTVUE100 placeholder"></div><div class="sub-model-info"><div class="sub-model-name">RTVUE100</div><div class="sub-model-achievement">✨ Achieved 99% uptime through capacitor replacement & boot fixes.</div></div></div>
-                <div class="sub-model-card"><div class="sub-model-image"><img src="images/Optovue_XR.jpg" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3EXR Avanti%3C/text%3E%3C/svg%3E" alt="XR Avanti placeholder"></div><div class="sub-model-info"><div class="sub-model-name">XR Avanti</div><div class="sub-model-achievement">✨ Upgraded GPU & frame grabber – 40% faster image processing.</div></div></div>
-                <div class="sub-model-card"><div class="sub-model-image"><img src="images/Optovue_Solix.jpg" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3ESOLIX%3C/text%3E%3C/svg%3E" alt="SOLIX placeholder"></div><div class="sub-model-info"><div class="sub-model-name">SOLIX Fullrange</div><div class="sub-model-achievement">✨ Calibrated scanner head – improved signal-to-noise by 25%.</div></div></div>
-                <div class="sub-model-card"><div class="sub-model-image"><img src="images/Optovue_Ivue80.jpg" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3EIVUE80%3C/text%3E%3C/svg%3E" alt="IVUE80 placeholder"></div><div class="sub-model-info"><div class="sub-model-name">IVUE80</div><div class="sub-model-achievement">✨ Added NVMe SSD – boot time reduced by 60%.</div></div></div>
-                <div class="sub-model-card"><div class="sub-model-image"><img src="images/DREAM.png" width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23cccccc'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23666' font-size='12'%3EiScan80%3C/text%3E%3C/svg%3E" alt="iScan80 placeholder"></div><div class="sub-model-info"><div class="sub-model-name">iScan80 (Automated OCT)</div><div class="sub-model-achievement">✨ Automated alignment accuracy increased by 30% after firmware upgrade.</div></div></div>
+                <!-- RTVUE100 – bullet points -->
+                <div class="sub-model-card">
+                    <div class="sub-model-image"><img src="images/Optovue_RTVUE100.jpg" alt="RTVUE100"></div>
+                    <div class="sub-model-info">
+                        <div class="sub-model-name">RTVUE100</div>
+                        <div class="sub-model-achievement">
+                            ✨ Key repairs & upgrades:
+                            <ul>
+                                <li>Revived end‑of‑life systems – capacitor replacement, frame grabber upgrade.</li>
+                                <li>Restored diagnostic imaging – SLD current recalibration, fiber reseating, interferometer realignment.</li>
+                                <li>Eliminated power hazards – cleaned carbonized contacts, resoldered AC outlets.</li>
+                                <li>Fixed motor/eye recognition errors – control board inspection, wiring repairs.</li>
+                                <li>Upgraded to multi‑drive SSD/HDD + SQL migration – dramatically faster performance.</li>
+                                <li>Replaced joystick, chinrest switches, cleaned scan head optics.</li>
+                                <li>Extended lifespan by years – all repairs verified with burn‑in tests.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- XR Avanti – bullet points -->
+                <div class="sub-model-card">
+                    <div class="sub-model-image"><img src="images/Optovue_XR.jpg" alt="XR Avanti"></div>
+                    <div class="sub-model-info">
+                        <div class="sub-model-name">XR Avanti</div>
+                        <div class="sub-model-achievement">
+                            ✨ Key repairs & upgrades:
+                            <ul>
+                                <li>Eliminated blue screen crashes – tested GPUs, frame grabbers, tuner cards, reseated PCIe slots.</li>
+                                <li>Restored no‑video systems – GPU upgrade, CMOS battery replacement, BIOS reconfigure.</li>
+                                <li>Repaired smoke‑damaged power supplies – soldered bridge rectifiers, cleaned contacts.</li>
+                                <li>Fixed “scanner not recognized” – reprogrammed EEPROM, serial sync, full calibration.</li>
+                                <li>SSD cloning – restored inoperable systems in under 30 minutes.</li>
+                                <li>Automated OS imaging – installation time reduced from 45 min to <5 min.</li>
+                                <li>Trained staff on scan settings, signal strength, network integration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- SOLIX Fullrange – bullet points -->
+                <div class="sub-model-card">
+                    <div class="sub-model-image"><img src="images/Optovue_Solix.jpg" alt="SOLIX Fullrange"></div>
+                    <div class="sub-model-info">
+                        <div class="sub-model-name">SOLIX Fullrange</div>
+                        <div class="sub-model-achievement">
+                            ✨ Key repairs & upgrades:
+                            <ul>
+                                <li>Resolved power/boot failures – CMOS battery, BIOS, eliminated intermittent power‑offs.</li>
+                                <li>Fixed software crashes, “SLD cannot be turned on” – removed unauthorized software, corrected licenses, clean install.</li>
+                                <li>Recovered unstable SLD – recalibrated driving currents, restored cut‑off thresholds, tuned photodiodes.</li>
+                                <li>Repaired spectrometer failures – calibration errors, low power, noise, realigned optics.</li>
+                                <li>Restored 5‑micron resolution – optical realignment, eliminated noise.</li>
+                                <li>Replaced defective mechatronics – split bar motors, galvo, ODOS sensors, reference arm.</li>
+                                <li>Full optical engine restoration – SLD assemblies, interferometer connections.</li>
+                                <li>Network integration – database corruption, printer, EMR data export fixes.</li>
+                                <li>Preventive maintenance – system shutdown cleaning, log verification, algorithm updates.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- IVUE80 – short, keep as is -->
+                <div class="sub-model-card">
+                    <div class="sub-model-image"><img src="images/Optovue_Ivue80.jpg" alt="IVUE80"></div>
+                    <div class="sub-model-info">
+                        <div class="sub-model-name">IVUE80</div>
+                        <div class="sub-model-achievement">
+						✨ Added NVMe SSD.
+                            <ul>
+                                <li>Corrected physical installation error – relocated scanner and cable from patient side to operator side per OEM requirement.</li>
+                                <li>Resolved critically low storage – Added high-speed NVMe SSD to NUC’s free M.2 slot for dedicated backup storage</li>
+                                <li>Eliminated performance delays caused by simultaneous writes to mismatched SSD/HDD pair.</li>
+                                <li>converted original HDD to archival storage.</li>
+                                <li>Linked existing patient data for continuity – no data loss.</li>
+                            </ul>						
+						</div>
+                    </div>
+                </div>
+                <!-- iScan80 – short, keep as is -->
+                <div class="sub-model-card">
+                    <div class="sub-model-image"><img src="images/Optovue_ISCAN500.jpg" alt="iScan80"></div>
+                    <div class="sub-model-info">
+                        <div class="sub-model-name">iScan80 (Automated OCT)</div>
+                        <div class="sub-model-achievement">
+						✨ Hardware & Software Optimization.
+                            <ul>
+                                <li>Restored optical power detection and scan initialization</li>
+								<li>Resolved software errors (scan freeze codes) by reinstalling drivers, performing clean OS installations, and deploying a new operating system image.</li>
+                                <li>Performed hardware upgrades: replaced main hard drive with high-performance SSD, upgraded backup drive to SSD, and installed new CMOS battery – significantly improved system responsiveness.</li>
+                            </ul>							
+						</div>
+                    </div>
+                </div>
+                <div class="sub-model-card">
+                    <div class="sub-model-image"><img src="images/IVUE_MicroScope.JPG" alt="OCT Microscope System  with IVUE80"></div>
+                    <div class="sub-model-info">
+                        <div class="sub-model-name">OCT Microscope System  with IVUE80</div>
+                        <div class="sub-model-achievement">
+                            ✨ Key repairs & upgrades:
+                            <ul>
+                                <li>Diagnosed and resolved synchronization issues between the scan head and footswitch caused by the metal mount's orientation.</li>
+                                <li>Reconfigured the control lines to compensate for the mount's orientation, ensuring proper scan head positioning.</li>
+                                <li>Positioned the scan head over a model eye and captured OCT images to confirm functionality and Verified that the system was ready for clinical use.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>				
             </div>
         </div>
 
         <div class="machines-grid">
             <!-- Argos -->
             <div class="machine-card">
-                <div class="image-container"><img src="images/ARGOS.jpg" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='14'%3EArgos SS-OCT%3C/text%3E%3C/svg%3E" alt="Argos placeholder"></div>
+                <div class="image-container"><img src="images/ARGOS.jpg" alt="Argos placeholder"></div>
                 <div class="machine-info">
                     <div class="machine-name">Argos Swept Source Anterior Segment OCT</div>
                     <div class="machine-model">Argos (Alcon)</div>
@@ -377,12 +489,12 @@
                     <div class="machine-achievement">🏆 Eliminated daily calibration failures via software restoration and high‑performance SSD replacement. Achieved stable, reliable startup and full calibration compliance.</div>
                 </div>
             </div>
-            <div class="machine-card"><div class="image-container"><img src="images/DREAM.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EDREAM OCTA%3C/text%3E%3C/svg%3E" alt="DREAM OCTA placeholder"></div><div class="machine-info"><div class="machine-name">Intalight DREAM OCTA</div><div class="machine-model">Ultra‑wide field SS-OCTA</div><div class="machine-desc">High‑end imaging, software upgrades.</div><div class="machine-achievement">🏆 Technical Demostration, forehead repair post misshandeling, motorized chinrest repar .</div></div></div>
-            <div class="machine-card"><div class="image-container"><img src="images/MicroClear_CRO01.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EMicro Clear%3C/text%3E%3C/svg%3E" alt="Micro Clear placeholder"></div><div class="machine-info"><div class="machine-name">Micro Clear Laser Fundus Camera</div><div class="machine-model">Ultra‑wide field</div><div class="machine-desc">Ubuntu upgrades, AI tools, fiber/laser driver repair.</div><div class="machine-achievement">🏆 AI diagnosis software upgrade reduced false positives by 18%.</div></div></div>
-            <div class="machine-card"><div class="image-container"><img src="images/Rodenstock_Perimate.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EPERIMAT%3C/text%3E%3C/svg%3E" alt="PERIMAT placeholder"></div><div class="machine-info"><div class="machine-name">Automated Perimeter Visual Field</div><div class="machine-model">Rodenstock PERIMAT & PERIMAT2</div><div class="machine-desc">Calibration, stimulus testing, mainboard repairs.</div><div class="machine-achievement">🏆 Restored stimulus accuracy to factory spec, improving glaucoma detection. Delivered training and detailed PPM logging.</div></div></div>
-            <div class="machine-card"><div class="image-container"><img src="images/SCANMATE-FLEX-ALTERNATE.jpg" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EDGH Ultrasound%3C/text%3E%3C/svg%3E" alt="DGH placeholder"></div><div class="machine-info"><div class="machine-name">Ophthalmic Ultrasound</div><div class="machine-model">DGH A‑scan, B‑scan, UBM</div><div class="machine-desc">Probe refurbishment, IOL calculations, gain/intensity optimization.</div><div class="machine-achievement">🏆 Refurbished 10+ A‑Scan probes, saving $15k in replacement costs. Optimized image quality and workstation SQL setup.</div></div></div>
-            <div class="machine-card"><div class="image-container"><img src="images/DREAM.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EVisionix K+%3C/text%3E%3C/svg%3E" alt="Visionix placeholder"></div><div class="machine-info"><div class="machine-name">Autorefractometer / Autokeratometer</div><div class="machine-model">Visionix K+ portable</div><div class="machine-desc">Calibration, alignment, lens measurement.</div><div class="machine-achievement">🏆 Calibrated alignment to within 0.05D, reducing re‑exams by 12%.</div></div></div>
-            <div class="machine-card"><div class="image-container"><img src="images/DREAM.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3ETopaScope%3C/text%3E%3C/svg%3E" alt="TopaScope placeholder"></div>
+            <div class="machine-card"><div class="image-container"><img src="images/DREAM.png" alt="DREAM OCTA"></div><div class="machine-info"><div class="machine-name">Intalight DREAM OCTA</div><div class="machine-model">Ultra‑wide field SS-OCTA</div><div class="machine-desc">High‑end imaging, software upgrades.</div><div class="machine-achievement">🏆 Technical Demostration, forehead repair post misshandeling, motorized chinrest repar .</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/MicroClear_CRO01.jpg" alt="Micro Clear"></div><div class="machine-info"><div class="machine-name">Micro Clear Laser Fundus Camera</div><div class="machine-model">Ultra‑wide field</div><div class="machine-desc">Ubuntu upgrades, AI tools, fiber/laser driver repair.</div><div class="machine-achievement">🏆 AI diagnosis software upgrade reduced false positives by 18%.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/Rodenstock_Perimate.png" alt="PERIMAT"></div><div class="machine-info"><div class="machine-name">Automated Perimeter Visual Field</div><div class="machine-model">Rodenstock PERIMAT & PERIMAT2</div><div class="machine-desc">Calibration, stimulus testing, mainboard repairs.</div><div class="machine-achievement">🏆 Restored stimulus accuracy to factory spec, improving glaucoma detection. Delivered training and detailed PPM logging.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/SCANMATE-FLEX-ALTERNATE.jpg" alt="DGH Ultrasound"></div><div class="machine-info"><div class="machine-name">Ophthalmic Ultrasound</div><div class="machine-model">DGH A‑scan, B‑scan, UBM</div><div class="machine-desc">Probe refurbishment, IOL calculations, gain/intensity optimization.</div><div class="machine-achievement">🏆 Refurbished 10+ A‑Scan probes, saving $15k in replacement costs. Optimized image quality and workstation SQL setup.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/retinomax-kscreeen3.png" alt="Visionix K+"></div><div class="machine-info"><div class="machine-name">Autorefractometer / Autokeratometer</div><div class="machine-model">Visionix K+ portable</div><div class="machine-desc">Calibration, alignment, lens measurement.</div><div class="machine-achievement">🏆 Calibrated alignment to within 0.05D, reducing re‑exams by 12%.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/TopaScope.png" alt="TopaScope"></div>
                 <div class="machine-info">
                     <div class="machine-name">Non‑contact Tonometer</div>
                     <div class="machine-model">Rodenstock TopaScope</div>
@@ -395,22 +507,53 @@
         <!-- Surgical Equipment -->
         <div class="section-title">👁️ Surgical Equipment</div>
         <div class="machines-grid">
-            <div class="machine-card"><div class="image-container"><img src="images/Sophi_P.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3ESOPHI%3C/text%3E%3C/svg%3E" alt="SOPHI placeholder"></div><div class="machine-info"><div class="machine-name">SOPHI Surgical Platform (Phaco)</div><div class="machine-model">THIS‑AG Sophi A & Premium</div><div class="machine-desc">Phacoemulsification system maintenance, handpiece testing, software calibration.</div><div class="machine-achievement">🏆 Provided live technical support for over 120 cataract surgeries across 10 locations, collaborating with 34 surgeons. Delivered in-depth training on cassette system, PHACO set, vitrectomy cutter, and bipolar forceps.</div></div></div>
-            <div class="machine-card"><div class="image-container"><img src="images/PXL-Sapphire-318.jpg" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3ESapphire 318%3C/text%3E%3C/svg%3E" alt="Sapphire placeholder"></div><div class="machine-info"><div class="machine-name">Corneal Cross‑linking CXL</div><div class="machine-model">Peschke Meditrade Sapphire 318</div><div class="machine-desc">UV lamp calibration, irradiance checks, safety validation.</div><div class="machine-achievement">🏆 Maintained UV irradiance within 2% of target, ensuring treatment efficacy.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/Sophi_P.jpg" alt="SOPHI"></div><div class="machine-info"><div class="machine-name">SOPHI Surgical Platform (Phaco)</div><div class="machine-model">THIS‑AG Sophi A & Premium</div><div class="machine-desc">Phacoemulsification system maintenance, handpiece testing, software calibration.</div><div class="machine-achievement">🏆 Provided live technical support for over 120 cataract surgeries across 10 locations, collaborating with 34 surgeons. Delivered in-depth training on cassette system, PHACO set, vitrectomy cutter, and bipolar forceps.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/PXL-Sapphire-318.jpg" alt="Sapphire 318"></div><div class="machine-info"><div class="machine-name">Corneal Cross‑linking CXL</div><div class="machine-model">Peschke Meditrade Sapphire 318</div><div class="machine-desc">UV lamp calibration, irradiance checks, safety validation.</div><div class="machine-achievement">🏆 Maintained UV irradiance within 2% of target, ensuring treatment efficacy.</div></div></div>
         </div>
 
         <!-- Sterilization Equipment -->
         <div class="section-title">🧼 Sterilization Equipment</div>
         <div class="machines-grid">
-            <div class="machine-card"><div class="image-container"><img src="images/FPS15S_Plus.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EPLASMAPP%3C/text%3E%3C/svg%3E" alt="PLASMAPP placeholder"></div><div class="machine-info"><div class="machine-name">STERLINK Low Temperature Plasma Sterilizer</div><div class="machine-model">PLASMAPP FPS 15s Plus</div><div class="machine-desc">80+ procedures, custom oil extractor (<3 min), seal/heater replacement, biological validation.</div><div class="machine-achievement">🏆 Achieved zero cycle failures after implementing predictive oil seal replacement. Designed test circuit for valve motor testing and refurbished critical spare parts.</div></div></div>
-            <div class="machine-card"><div class="image-container"><img src="images/Enbio-PRO.jpg" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3EENBIO PRO%3C/text%3E%3C/svg%3E" alt="ENBIO placeholder"></div><div class="machine-info"><div class="machine-name">Class B Autoclave</div><div class="machine-model">ENBIO PRO</div><div class="machine-desc">Steam cycles, water filling/draining, pressure calibration.</div><div class="machine-achievement">🏆 Reduced cycle time by 15% after optimizing water filling parameters. Performed corrective maintenance on HEPA filters, gaskets, and solenoid water pump.</div></div></div>
-            <div class="machine-card"><div class="image-container"><img src="images/lisa-sterilizer.png" width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23cccccc'/%3E%3Ctext x='75' y='80' text-anchor='middle' fill='%23666' font-size='12'%3ELisa 22%3C/text%3E%3C/svg%3E" alt="Lisa placeholder"></div><div class="machine-info"><div class="machine-name">LISA Class B Autoclave</div><div class="machine-model">W&H Lisa 22</div><div class="machine-desc">Preventive maintenance, filter replacement, validation cycles.</div><div class="machine-achievement">🏆 Extended vacuum pump life by 2 years through regular oil seal replacements.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/FPS15S_Plus.png" alt="PLASMAPP"></div><div class="machine-info"><div class="machine-name">STERLINK Low Temperature Plasma Sterilizer</div><div class="machine-model">PLASMAPP FPS 15s Plus</div><div class="machine-desc">80+ procedures, custom oil extractor (<3 min), seal/heater replacement, biological validation.</div><div class="machine-achievement">🏆 Achieved zero cycle failures after implementing predictive oil seal replacement. Designed test circuit for valve motor testing and refurbished critical spare parts.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/Enbio-PRO.jpg" alt="ENBIO PRO"></div><div class="machine-info"><div class="machine-name">Class B Autoclave</div><div class="machine-model">ENBIO PRO</div><div class="machine-desc">Steam cycles, water filling/draining, pressure calibration.</div><div class="machine-achievement">🏆 Performed corrective maintenance on water level Sensors, HEPA filters,  Door gaskets, and solenoid water pump.</div></div></div>
+            <div class="machine-card"><div class="image-container"><img src="images/lisa-sterilizer.png" alt="Lisa 22"></div><div class="machine-info"><div class="machine-name">LISA Class B Autoclave</div><div class="machine-model">W&H Lisa 22</div><div class="machine-desc">Preventive maintenance, filter replacement, validation cycles.</div><div class="machine-achievement">🏆 Performed corrective maintenance on HEPA filters, gaskets, and solenoid water pump.</div></div></div>
+        </div>
+
+        <!-- =============== Electronics & Component-Level Repairs =============== -->
+        <div class="section-title">🔧 Electronics & Component-Level Repairs</div>
+        <div class="machines-grid">
+            <div class="machine-card">
+                <div class="image-container"><img src="images/test.jpg" alt="OCT board repair"></div>
+                <div class="machine-info">
+                    <div class="machine-name">Power Supply Repairs</div>
+                    <div class="machine-model">Model</div>
+                    <div class="machine-desc">Desc..</div>
+                    <div class="machine-achievement">🎥 <a href="#" target="_blank" style="color:#1a6e5c; text-decoration:underline;">Watch repair video (link)</a> – Micro‑soldering & board‑level diagnosis.</div>
+                </div>
+            </div>
+            <div class="machine-card">
+                <div class="image-container"><img src="images/test.jpg" alt="SMD soldering"></div>
+                <div class="machine-info">
+                    <div class="machine-name">SMD Soldering & IC Rework</div>
+                    <div class="machine-model">Model</div>
+                    <div class="machine-desc">Desc..</div>
+                    <div class="machine-achievement">🎥 <a href="#" target="_blank" style="color:#1a6e5c; text-decoration:underline;">Watch rework video</a> – Hot air & soldering iron techniques.</div>
+                </div>
+            </div>
+            <div class="machine-card">
+                <div class="image-container"><img src="images/test.jpg" alt="Legacy refurbishment"></div>
+                <div class="machine-info">
+                    <div class="machine-name">Legacy System Refurbishment</div>
+                    <div class="machine-model">Model</div>
+                    <div class="machine-desc">Desc..</div>
+                    <div class="machine-achievement">🎥 <a href="#" target="_blank" style="color:#1a6e5c; text-decoration:underline;">Watch refurbishment video</a> – From non‑functional to full operation.</div>
+                </div>
+            </div>
         </div>
 
         <!-- Additional experience note -->
         <div class="achievement-bar">
             📊 <strong>Overall achievements:</strong> high first time fix rate (single visit resolution). Proficient in service contracts, spare parts inventory, refurbishment, and component‑level repairs for legacy systems – all to OEM standards.<br>
-            <span style="font-size:0.8rem;">Presented at the Egyptian Ophthalmological Society (EOS) – April 2024.</span>
         </div>
 
         <footer>
